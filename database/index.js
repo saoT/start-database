@@ -15,8 +15,8 @@ MongoClient.connect(url, function(error, db) {
 
     // CRUD method
     users.insert({
-      name: 'Sara',
-      mail: 'sze.zf@zef.com',
+      name: 'User',
+      mail: 'user@mail.com',
     }, function (err, res) {
       console.log('--------------------THIS IS INSERT RESPONSE--------------');
       console.log(res);
@@ -27,13 +27,13 @@ MongoClient.connect(url, function(error, db) {
       console.log(docs);
     });
 
-    users.updateOne({ name : 'Sara' }, { $set: { mail : 'scsdcds@khz.iedc' } }, function(err, result) {
+    users.updateOne({ name : 'User' }, { $set: { mail : 'user@mail.fr' } }, function(err, result) {
       console.log('--------------------THIS IS UPDATE RESPONSE--------------');
       console.log(result);
     });
 
-    users.deleteOne({ name : 'Sara' }, function(err, result) {
-      console.log("Removed the document with the field a equal to 3");
+    users.deleteOne({ name : 'User' }, function(err, result) {
+      console.log("Removed the user with the name user");
       console.log(result);
     });
   }
